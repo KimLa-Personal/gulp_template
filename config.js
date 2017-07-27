@@ -37,9 +37,18 @@ module.exports = {
         dest: 'dist/%type%'
       },
       js: {
-        src: 'assets/%type%/script/**/*.js',
+        src: [
+          'assets/%type%/script/**/*.js',
+          '!assets/%type%/script/**/_*/*.js'
+        ],
         watch: 'assets/%type%/**/*.js',
         dest: 'dist/%type%'
+      },
+      jsconcat: {
+        src: 'assets/%type%/script/**/_*/*.js',
+        watch: 'assets/%type%/**/_*/*.js',
+        dest: 'dist/%type%/common/js',
+        filename: 'common.js'
       },
       test: {
         src: [

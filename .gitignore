@@ -10,3 +10,4 @@ _sprite.styl
 vendor
 npm-debug.log
 coverage
+package-lock.json
